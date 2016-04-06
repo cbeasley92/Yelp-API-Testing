@@ -16,5 +16,20 @@ with io.open('config.json') as cred:
     auth = Oauth1Authenticator(**creds)
     client = Client(auth)
 
+
 def get_search_dallas():
-    response = requests.get()
+    params = {
+        'term': 'food',
+        'lang': 'en'
+    }
+
+    response = client.search('Dallas', **params)
+
+    print type(response)
+
+
+def main():
+    print 'Searching Yelp for Dallas'
+    get_search_dallas()
+
+main()
