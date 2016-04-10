@@ -38,12 +38,12 @@ def get_search_dallas():
     # print type(response)
     # print response.businesses
 
-    print '%-*s%s' % (35, 'Name', 'Rating')
-    logging.info('%-*s%s' % (35, 'Name', 'Rating'))
+    print '%-*s%s' % (35, 'Name', 'Category')
+    logging.info('%-*s%s' % (35, 'Name', 'Category'))
 
     for x in response.businesses:
-        print '%-*s%s' % (35, x.name, x.rating)
-        logging.info('%-*s%s' % (35, x.name, x.rating))
+        print '%-*s%s' % (35, x.name, x.categories)
+        logging.info('%-*s%s' % (35, x.name, x.categories))
 
 
 def main():
